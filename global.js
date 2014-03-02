@@ -1,4 +1,5 @@
 var app = app || {};
+    app.modalPopup = {};
 
 app = {
 
@@ -20,6 +21,13 @@ app = {
         app.favoriteWidget();
         app.desktopSite();
         app.gallery();
+        app.initChoosen();
+        app.journeyPlanner();
+        app.journeyPlannerSubmit();
+    },
+    
+    initChoosen: function() {
+        $(".topRightWidgets form select").chosen({disable_search_threshold: 10000});
     },
     
     cookieNote: function () {
@@ -33,7 +41,7 @@ app = {
         }
         
         $('#closeCookie').on('click', function() {
-            $.cookie('TubeMe_cookie', 'true', { expires: 365 });            
+            $.cookie('TubeMe_cookie', 'true', {expires: 365});            
             $('#cookie').fadeOut(300);              
         });
     },
@@ -485,7 +493,127 @@ app = {
                 autohideControls: true
             });  
         } 
+    },
+    journeyPlanner: function() {
+        var moreOption = $('#travelMoreOptions'),
+            optionsBlock = $('.topRightWidgets #journeyMoreOptions'),
+            optionItem = $('.topRightWidgets #journeyMoreOptions ul li span'),
+            journeyOption = $('.journeyOptionBtn');
+            
+        function destinations() {
+            $( "#travelFrom, #travelTo" ).autocomplete({
+                source: availableTags,
+                delay: 0
+            });         
+        }
+        
+        destinations();
+
+        journeyOption.on('click', function() {
+            if($(this).hasClass('activeJourneyType')){
+                $(this).removeClass('activeJourneyType');
+            }else if(!($(this).hasClass('activeJourneyType'))) {
+                $(this).siblings().removeClass('activeJourneyType');
+                $(this).addClass('activeJourneyType');
+            }
+        });
+
+        optionItem.on('click', function() {
+            if($(this).hasClass('selectedMOT')){
+                $(this).removeClass('selectedMOT');
+            }else if(!($(this).hasClass('selectedMOT'))){
+                $(this).addClass('selectedMOT');
+            }
+        });
+        
+        moreOption.on('click', function(e){
+            e.preventDefault();
+            if(optionsBlock.hasClass('hiddenOptions')){
+                optionsBlock.show();
+                $(this).addClass('activeOptionsBtn');
+                optionsBlock.removeClass('hiddenOptions');
+            }else if(!(optionsBlock.hasClass('hiddenOptions'))){
+                optionsBlock.hide();
+                $(this).removeClass('activeOptionsBtn');
+                optionsBlock.addClass('hiddenOptions');
+            }
+            
+        });
+    },
+    journeyPlannerSubmit: function() {
+        var submitPlanner = $('#planJourneySubmit'),
+            modalPopup = $('#modalPopup'),
+            travelFrom = $('#travelFrom'),
+            travelTo = $('#travelTo'),
+            data;
+        
+        submitPlanner.on('click', function(e) {
+            e.preventDefault();            
+            if( travelFrom.val() === 'Travel from' ) {
+                app.modalPopup.initModal(modalPopup, travelFrom.val());
+                return;
+            } else if( travelTo.val() === 'Travel to' ) {
+                app.modalPopup.initModal(modalPopup, travelTo.val());
+                return;
+            }
+            function errorHanler() {
+                
+            }
+            function beforeJourneyPlanner() {
+                
+            }
+            function journeySucces() {
+                
+            }
+            function journeyPlannerComplete() {
+                
+            }
+            $.ajax({
+                url: 'www.arturas-vorobjovas.com',
+                crossDomain : true,
+                data: data,
+                dataType: "xml",
+                error: errorHanler(),
+                beforeSend: beforeJourneyPlanner(),
+                success: journeySucces(),
+                complete: journeyPlannerComplete()               
+            });
+        });
     }
 }
 
 $(document).ready(app.init);
+
+var month=new Array();
+    month[0]="Jan";
+    month[1]="Feb";
+    month[2]="Mar";
+    month[3]="Apr";
+    month[4]="May";
+    month[5]="Jun";
+    month[6]="Jul";
+    month[7]="Aug";
+    month[8]="Sep";
+    month[9]="Oct";
+    month[10]="Nov";
+    month[11]="Dec";
+    
+
+var weekday=new Array(7);
+    weekday[0]="Sun";
+    weekday[1]="Mon";
+    weekday[2]="Tue";
+    weekday[3]="Wed";
+    weekday[4]="Thu";
+    weekday[5]="Fri";
+    weekday[6]="Sat";
+
+for(i=0;i<31;i++){
+    var date = new Date();
+    date.setDate(date.getDate() + i);
+
+    var dateMsg = weekday[date.getDay()]+' '+date.getDate()+' '+ (month[date.getMonth()]);
+    console.log(dateMsg);
+}
+
+
