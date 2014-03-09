@@ -96,6 +96,42 @@ var app = {
             favCont.listview("refresh");
             $('li.addToHome').remove(); // hack to remove "add to home" widget local storage 
         }         
+    },
+    
+    journeyPlannerDatesMob: function() {
+        var month=new Array(12),
+            weekday=new Array(7),
+            dateSelect = $('#journeyDateMob');
+            
+            month[0]="Jan";
+            month[1]="Feb";
+            month[2]="Mar";
+            month[3]="Apr";
+            month[4]="May";
+            month[5]="Jun";
+            month[6]="Jul";
+            month[7]="Aug";
+            month[8]="Sep";
+            month[9]="Oct";
+            month[10]="Nov";
+            month[11]="Dec";
+
+            weekday[0]="Sun";
+            weekday[1]="Mon";
+            weekday[2]="Tue";
+            weekday[3]="Wed";
+            weekday[4]="Thu";
+            weekday[5]="Fri";
+            weekday[6]="Sat";
+
+        for(i=0;i<31;i++){
+            var date = new Date();
+            date.setDate(date.getDate() + i);
+
+            var dateMsg = weekday[date.getDay()]+' '+date.getDate()+' '+ (month[date.getMonth()]);
+            dateSelect.append('<option>'+dateMsg+'</option');
+        }
+       
     }
 }
 
@@ -111,6 +147,12 @@ $(document).bind('pageinit', function(){
     $('#page').on('pageshow', function() {
         app.updateFavoriteButton();
         app.makeFavorite();
+    });
+    $('#journeyPlannerPage').on('pageshow', function(){
+        app.journeyPlannerDatesMob();
+        $('#moreTravelOptMob').on('tap', function() {
+            $('#moreTravelOptions').slideToggle();
+        });
     });
 });
 $(document).on('pageshow', function() {
