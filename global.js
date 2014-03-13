@@ -13,7 +13,8 @@ var app = app || {};
     app = {
 
         init: function() {
-
+            "use strict";
+            
             app.cookieNote();
             app.bannerSlider();
             app.scrollMenu();

@@ -1,15 +1,41 @@
 app.journeyPlannerApi = {
     
     init: function() {
+        "use strict";
+        
+        app.journeyPlannerApi.initChoosen();
         app.journeyPlannerApi.journeyPlannerDates();        
         app.journeyPlannerApi.journeyPlanner();
-        app.journeyPlannerApi.journeyPlannerSubmit();
-        app.journeyPlannerApi.initChoosen();
+        app.journeyPlannerApi.journeyPlannerSubmit();        
     },    
     
-    initChoosen: function() {
+    initChoosen: function() {     
+        app.journeyPlannerApi.journeyPlannerDates();
+        app.journeyPlannerApi.setJourneyTime();      
+        
         $(".topRightWidgets form select").chosen({disable_search_threshold: 10000});
         $('#journeyDateSelection .chosen-container-single .chosen-single span').text('Today');
+    },
+    
+    setJourneyTime: function() {
+        var date = new Date();
+            mins = date.getMinutes(),
+            hours = date.getHours(),
+            exMins = "00";
+            
+        if( mins>=0 && mins<=10 ) {
+            exMins = "15"; 
+        }else if( mins>=11 && mins<=25 ) {
+            exMins = "30";
+        }else if( mins>=26 && mins<=40 ) {
+            exMins = "45";
+        }else if( mins>=41 && mins<=59 ) {
+            exMins = "00";
+            hours = date.getHours()+1;
+        }
+           
+        var timeStr = hours.toString()+exMins;
+        $('#journeyTime').find('option[value="'+timeStr+'"]').attr('selected','selected');
     },
         
     journeyPlanner: function() {
@@ -27,20 +53,16 @@ app.journeyPlannerApi = {
 
         destinations();
 
-        journeyOption.on('click', function() {
-            if($(this).hasClass('activeJourneyType')){
-                $(this).removeClass('activeJourneyType');
-            }else if(!($(this).hasClass('activeJourneyType'))) {
-                $(this).siblings().removeClass('activeJourneyType');
-                $(this).addClass('activeJourneyType');
-            }
+        journeyOption.on('click', function() {          
+            $(this).siblings().removeClass('activeJourneyType');
+            $(this).addClass('activeJourneyType');     
         });
 
         optionItem.on('click', function() {
             if($(this).hasClass('selectedMOT')){
-                $(this).removeClass('selectedMOT');
+                $(this).removeClass('selectedMOT').addClass('exOption');
             }else if(!($(this).hasClass('selectedMOT'))){
-                $(this).addClass('selectedMOT');
+                $(this).addClass('selectedMOT').removeClass('exOption');
             }
         });
 
@@ -140,35 +162,37 @@ app.journeyPlannerApi = {
 
             dateSelect.append('<option value="'+date.getUTCFullYear()+monthNum[date.getMonth()]+dayNum[date.getUTCDate()]+'">'+dateMsg+'</option>');
         }
+        $('#journeyDate option:nth-child(1)').text('Today');
+        $('#journeyDate option:nth-child(2)').text('Tomorrow');
     },
     
     journeyPlannerSubmit: function() {
         var submitPlanner = $('#planJourneySubmit'),
-            modalPopup = $('#modalPopup'),
-            travelFrom = $('#travelFrom'),
-            travelTo = $('#travelTo'),
-            data;
+            modalPopup = $('#modalPopup');
 
         submitPlanner.on('click', function(e) {
-            e.preventDefault();             
+            e.preventDefault();    
+            
+            var travelFrom = $('#travelFrom').val(),
+                travelTo = $('#travelTo').val(),
+                itdTripDateTimeDepArr = $('#activeJourneyType').data('journey-type'),
+                itdDate = $('#journeyDate').val(),
+                itdTime = $('#journeyTime').val(),
+                journeyOpt = $('.exOption'),
+                exOptionItems,
+                exOption = '',
+                dataRequest;
 
-            if( travelFrom.val() === 'Travel from' ) {
-                app.modalPopup.initModal(modalPopup, travelFrom.val());
+            if( travelFrom === 'Travel from' ) {
+                app.modalPopup.initModal(modalPopup, travelFrom);
                 return;
-            } else if( travelTo.val() === 'Travel to' ) {
-                app.modalPopup.initModal(modalPopup, travelTo.val());
+            } else if( travelTo === 'Travel to' ) {
+                app.modalPopup.initModal(modalPopup, travelTo);
                 return;
-            } else if( travelFrom.val() !== 'Travel from' && travelTo.val() !== 'Travel to' ) {
+            } else if( travelFrom !== 'Travel from' && travelTo !== 'Travel to' ) {
                 planJourney();
             }
             function planJourney() {
-
-//                var travelFrom = $('#travelFrom').val,
-//                    travelTo = ,
-//                    travelType = ,
-//                    travelDay = ,
-//                    travelTime = ,
-//                    travelOptions = ;
 
                 function journeyPlannerError() {
 
@@ -176,13 +200,24 @@ app.journeyPlannerApi = {
                 function beforeJourneyPlanner() {
 
                 }
-                function journeyPlannerSuccess() {
-
+                function journeyPlannerSuccess(dataResponse) {
+                     console.log(dataResponse);
                 }
+                if(journeyOpt.length>0){
+                    exOptionItems = journeyOpt.map(function(){
+                        var x = $(this).data('mot-val');
+                        return x;
+                    }).get().join("=-&"); 
+                    exOption = "&"+exOptionItems;
+                }
+                
+                dataRequest = "language=en&sessionID=0&itdTripDateTimeDepArr="+itdTripDateTimeDepArr+"&itdDate="+itdDate+"&itdTime="+itdTime+"&eleteAssignedStops=1&place_origin=London&type_origin=stop&name_origin="+encodeURIComponent(travelFrom)+"&place_destination=London&type_destination=stop&name_destination="+encodeURIComponent(travelTo)+"&calcNumberOfTrips=1&coordOutputFormatTail=0&coordListOutputFormat=STRING&excludedMeans=checkbox&exclMOT_6=-&exclMOT_10=-&exclMOT_11=-&exclMOT_12=-&exclMOT_13=-&exclMOT_14=-&exclMOT_15=-&exclMOT_16=-&exclMOT_17=-&exclMOT_18=-&exclMOT_19=-"+exOption+"";
+               
+               
                 $.ajax({
                     url: 'http://tubeme.co.uk/php/journey-planner-api.php',
                     type: "POST",
-                    data: 'language=en&sessionID=0&itdDateYear=14&itdDateMonth=03&itdDateDay=09&itdTime=1430&selectAssignedStops=0&place_origin=London&type_origin=stop&name_origin=Bank&place_destination=London&type_destination=stop&name_destination=Holborn&excludedMeans=checkbox&exclMOT_6=-&exclMOT_10=-&exclMOT_11=-&exclMOT_12=-&exclMOT_13=-&exclMOT_14=-&exclMOT_15=-&exclMOT_16=-&exclMOT_17=-&exclMOT_18=-&exclMOT_19=-',
+                    data: dataRequest,
                     beforeSend: function () {
                         beforeJourneyPlanner();
                     },
@@ -190,7 +225,7 @@ app.journeyPlannerApi = {
                         journeyPlannerError();
                     },
                     success: function(data) {
-                        journeyPlannerSuccess();
+                        journeyPlannerSuccess(data);
 
                         // getting ready to show selected journey details
                         app.journeyPlannerApi.journeyPlannerShowJoruney();

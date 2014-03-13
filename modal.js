@@ -3,6 +3,8 @@ app.modalPopup = {
     overLay: $('#overlayPlain'),   
     
     initModal: function(elem, msg) {
+        "use strict";
+        
         var item = elem.html();
         $('body').append(item);
         if(msg){
