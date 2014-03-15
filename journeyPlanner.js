@@ -168,20 +168,12 @@ app.journeyPlannerApi = {
     
     journeyPlannerSubmit: function() {
         var submitPlanner = $('#planJourneySubmit'),
-            modalPopup = $('#modalPopup');
+            modalPopup = $('#modalPopup'),
+            travelFrom = $('#travelFrom').val(),
+            travelTo = $('#travelTo').val();
 
         submitPlanner.on('click', function(e) {
             e.preventDefault();    
-            
-            var travelFrom = $('#travelFrom').val(),
-                travelTo = $('#travelTo').val(),
-                itdTripDateTimeDepArr = $('#activeJourneyType').data('journey-type'),
-                itdDate = $('#journeyDate').val(),
-                itdTime = $('#journeyTime').val(),
-                journeyOpt = $('.exOption'),
-                exOptionItems,
-                exOption = '',
-                dataRequest;
 
             if( travelFrom === 'Travel from' ) {
                 app.modalPopup.initModal(modalPopup, travelFrom);
@@ -190,54 +182,105 @@ app.journeyPlannerApi = {
                 app.modalPopup.initModal(modalPopup, travelTo);
                 return;
             } else if( travelFrom !== 'Travel from' && travelTo !== 'Travel to' ) {
-                planJourney();
-            }
-            function planJourney() {
-
-                function journeyPlannerError() {
-
-                }
-                function beforeJourneyPlanner() {
-
-                }
-                function journeyPlannerSuccess(dataResponse) {
-                     console.log(dataResponse);
-                }
-                if(journeyOpt.length>0){
-                    exOptionItems = journeyOpt.map(function(){
-                        var x = $(this).data('mot-val');
-                        return x;
-                    }).get().join("=-&"); 
-                    exOption = "&"+exOptionItems;
-                }
-                
-                dataRequest = "language=en&sessionID=0&itdTripDateTimeDepArr="+itdTripDateTimeDepArr+"&itdDate="+itdDate+"&itdTime="+itdTime+"&eleteAssignedStops=1&place_origin=London&type_origin=stop&name_origin="+encodeURIComponent(travelFrom)+"&place_destination=London&type_destination=stop&name_destination="+encodeURIComponent(travelTo)+"&calcNumberOfTrips=1&coordOutputFormatTail=0&coordListOutputFormat=STRING&excludedMeans=checkbox&exclMOT_6=-&exclMOT_10=-&exclMOT_11=-&exclMOT_12=-&exclMOT_13=-&exclMOT_14=-&exclMOT_15=-&exclMOT_16=-&exclMOT_17=-&exclMOT_18=-&exclMOT_19=-"+exOption+"";
-               
-               
-                $.ajax({
-                    url: 'http://tubeme.co.uk/php/journey-planner-api.php',
-                    type: "POST",
-                    data: dataRequest,
-                    beforeSend: function () {
-                        beforeJourneyPlanner();
-                    },
-                    error: function (jqXHR, textStatus, errorThrown){
-                        journeyPlannerError();
-                    },
-                    success: function(data) {
-                        journeyPlannerSuccess(data);
-
-                        // getting ready to show selected journey details
-                        app.journeyPlannerApi.journeyPlannerShowJoruney();
-                    }
-                });
-
-            }            
+                app.journeyPlannerApi.planJourney();
+            }                       
         });
     },
     
-    journeyPlannerShowJoruney: function() {
+    planJourney: function() {
+        
+        var travelFrom = $('#travelFrom').val(),
+            travelTo = $('#travelTo').val(),
+            itdTripDateTimeDepArr = $('#activeJourneyType').data('journey-type'),
+            itdDate = $('#journeyDate').val(),
+            itdTime = $('#journeyTime').val(),
+            journeyOpt = $('.exOption'),
+            exOptionItems,
+            exOption = '',
+            dataRequest;
+                
+        if(journeyOpt.length>0){
+            exOptionItems = journeyOpt.map(function(){
+                var x = $(this).data('mot-val');
+                return x;
+            }).get().join("=-&"); 
+            exOption = "&"+exOptionItems;
+        }
 
+        dataRequest = "language=en&sessionID=0&itdTripDateTimeDepArr="+itdTripDateTimeDepArr+"&itdDate="+itdDate+"&itdTime="+itdTime+"&place_origin=London&type_origin=stop&name_origin="+encodeURIComponent(travelFrom)+"&place_destination=London&type_destination=stop&name_destination="+encodeURIComponent(travelTo)+"&calcNumberOfTrips=4&coordOutputFormatTail=0&coordListOutputFormat=STRING&excludedMeans=checkbox&exclMOT_6=-&exclMOT_10=-&exclMOT_11=-&exclMOT_12=-&exclMOT_13=-&exclMOT_14=-&exclMOT_15=-&exclMOT_16=-&exclMOT_17=-&exclMOT_18=-&exclMOT_19=-"+exOption+"";
+
+
+        $.ajax({
+            url: 'http://tubeme.co.uk/php/journey-planner-api.php',
+            type: "POST",
+            data: dataRequest,
+            beforeSend: function () {
+                app.journeyPlannerApi.beforeJourneyPlanner();
+            },
+            error: function (jqXHR, textStatus, errorThrown){
+                app.journeyPlannerApi.journeyPlannerError();
+            },
+            success: function(data) {
+                app.journeyPlannerApi.journeyPlannerShowJourney(data);
+            }
+        });
+
+    },
+    
+    beforeJourneyPlanner: function() {
+        var journeyModal = $('#journeyPlannerModal');
+        app.modalPopup.initModal(journeyModal);
+    },
+    
+    journeyPlannerError: function() {
+        
+    },
+    
+    journeyPlannerShowJourney: function(dataResponse) {
+        //console.log(dataResponse);
+        var dateCur = new Date(),
+            xmlData = $.parseXML( dataResponse ),
+            xmlParsed = $( xmlData ),
+            titleOut = xmlParsed.find("itdOdv[type='stop'][usage='origin'] odvNameInput").text(),
+            titleIn = xmlParsed.find("itdOdv[type='stop'][usage='destination'] odvNameInput").text(),
+            leavingDateDay = xmlParsed.find("itdTripDateTime itdDate").attr('day'),
+            leavingTimeMin = xmlParsed.find("itdTripDateTime itdTime").attr('minute'),
+            leavingTimeHour = xmlParsed.find("itdTripDateTime itdTime").attr('hour'),
+            setLeavingDate;
+            
+            dateCur.setDate(leavingDateDay);
+            setLeavingDate = dateCur.toLocaleDateString();
+            leavingTimeMin = '0' ? leavingTimeMin = '00':'';
+
+            $('#jprFrom').append(titleOut);
+            $('#jprTo').append(titleIn);
+            $('#jprLeaving').append(setLeavingDate,',&nbsp;', leavingTimeHour,'&#58;',leavingTimeMin);
+            
+            xmlParsed.find('itdRoute').each(function(){
+                var depHour = $(this).find("itdRoute itdPartialRoute itdPoint[usage='departure'] itdTime").attr("hour"),
+                    depMin = $(this).find("itdRoute itdPartialRoute itdPoint[usage='departure'] itdTime").attr("minute"),
+                    arrHour = $(this).find("itdRoute itdPartialRoute itdPoint[usage='arrival'] itdTime").attr("hour"),
+                    arrMin = $(this).find("itdRoute itdPartialRoute itdPoint[usage='arrival'] itdTime").attr("minute"),
+                    duration = $(this).find("itdPartialRoute").attr("timeMinute"),
+                    durHour = Math.floor( duration / 60),
+                    durMin = duration % 60,
+                    stationsNames, timeToStations;
+                    
+                    xmlParsed.find("itdPartialRouteList itdPoint[usage='arrival']").each(function(items, elem){
+                        //console.log($(this).find("itdPoint[usage='arrival']").each(function(){
+                           console.log($(this).attr("name"));
+                           stationsNames = $(this).attr("name");
+                        //}));
+//                        xmlParsed.find("itdPartialRoute").each(function(){
+//                            stationsNames = $(this).find("itdPartialRoute itdPoint[usage='arrival']").attr("name"),
+//                            timeToStations = $(this).find("itdPartialRoute").attr("timeMinute"); 
+//                        });                                                 
+                          
+                    });
+                    
+                    $('ul#jpList').append('<li><div class="jrTimeDetails"><p><span>Duration </span>'+durHour+'hr '+durMin+'mins</p><p><span>Departs </span>'+depHour+'&#58;'+depMin+'</p><p><span>Arrives </span>'+arrHour+'&#58;'+arrMin+'</p></div><div class="jrTravelDetails">'+stationsNames+'</div></li>');
+                    
+            });
     }   
 };
 

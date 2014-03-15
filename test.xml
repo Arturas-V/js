@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itdRequest language="en" sessionID="TLJXML03P1_2002919909" client="" serverID="TLJXML03P1_" clientIP="192.168.11.18" version="10.0.28.33" virtDir="api" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <itdTripRequest requestID="1">
+    <itdAddress name="" place="" street="">
+  </itdAddress>
+    <itdOdv type="stop" usage="origin">
+      <itdOdvPlace state="identified" method="itp">
+        <odvPlaceElem omc="31117000" value="31117000:20060403" placeID="20060403" mainPlace="1" span="0" type="remote">London</odvPlaceElem>
+        <odvPlaceInput>London</odvPlaceInput>
+      </itdOdvPlace>
+      <itdOdvName state="identified" method="itp">
+        <odvNameElem value="1000012:1" stopID="1000012" x="528534" y="826825" mapName="TFLV" isTransferStop="0" matchQuality="0">Balham</odvNameElem>
+        <odvNameInput>Balham</odvNameInput>
+      </itdOdvName>
+    </itdOdv>
+    <itdOdv type="stop" usage="destination">
+      <itdOdvPlace state="identified" method="itp">
+        <odvPlaceElem omc="31117000" value="31117000:20060403" placeID="20060403" mainPlace="1" span="0" type="remote">London</odvPlaceElem>
+        <odvPlaceInput>London</odvPlaceInput>
+      </itdOdvPlace>
+      <itdOdvName state="identified" method="itp">
+        <odvNameElem value="1000226:1" stopID="1000226" x="538632" y="815536" mapName="TFLV" isTransferStop="0" matchQuality="0">Stratford</odvNameElem>
+        <infoLink>
+          <paramList>
+            <param edit="0">
+              <type>outputOption</type>
+              <name>appearance</name>
+              <value>3</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>creationTime</name>
+              <value>12/06/12 22:41</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>lastModificationTime</name>
+              <value>09/09/12 12:07</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>priority</name>
+              <value>normal</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>systemName</name>
+              <value>unknown</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>infoType</name>
+              <value>stopInfo</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>concernedStop0</name>
+              <value>1000226</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>concernedStop1</name>
+              <value>1000274</value>
+            </param>
+            <param edit="0">
+              <type>system</type>
+              <name>infoID</name>
+              <value>1133185_TfL</value>
+            </param>
+            <param edit="0">
+              <type>system</type>
+              <name>seqID</name>
+              <value>8</value>
+            </param>
+          </paramList>
+          <infoLinkText>STRATFORD AND WOODFORD STATIONS: A ramp is provided at this station providing step-free access onto Central line trains. Please ask staff in the ticket hall for assistance.</infoLinkText>
+          <infoLinkURL>http://213.219.31.121:80/ics/XSLT_CM_SHOWADDINFO_REQUEST?infoID=1133185_TfL&amp;seqID=1</infoLinkURL>
+          <infoLinkImage></infoLinkImage>
+          <infoText>
+            <content></content>
+            <subtitle>STRATFORD AND WOODFORD STATIONS: A ramp is provided at this station providing step-free access onto Central line trains. Please ask staff in the ticket hall for assistance.</subtitle>
+            <subject></subject>
+            <additionalText></additionalText>
+            <image></image>
+            <outputClientText>
+              <htmlText></htmlText>
+              <wmlText></wmlText>
+              <smsText></smsText>
+              <speechText></speechText>
+            </outputClientText>
+          </infoText>
+        </infoLink>
+        <infoLink>
+          <paramList>
+            <param edit="0">
+              <type>outputOption</type>
+              <name>appearance</name>
+              <value>3</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>creationTime</name>
+              <value>14/09/12 13:40</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>lastModificationTime</name>
+              <value>28/01/14 08:22</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>concernedStop0</name>
+              <value>1000226</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>systemName</name>
+              <value>unknown</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>infoType</name>
+              <value>stopInfo</value>
+            </param>
+            <param edit="0">
+              <type>addInfoParam</type>
+              <name>priority</name>
+              <value>normal</value>
+            </param>
+            <param edit="0">
+              <type>system</type>
+              <name>infoID</name>
+              <value>1141824_TfL</value>
+            </param>
+            <param edit="0">
+              <type>system</type>
+              <name>seqID</name>
+              <value>2</value>
+            </param>
+          </paramList>
+          <infoLinkText>STRATFORD STATION, JUBILEE LINE: If you require level access between train and platform the area you need to board the train will depend on where you are travelling to. For Green Park and Kingsbury, please use cars 5 and 6, for Wembley Park, please use car 7. For West Ham, Canning Town, North Greenwich, Canary Wharf, Canada Water, Bermondsey, London Bridge, Southwark and Westminster, please use any car.</infoLinkText>
+          <infoLinkURL>http://213.219.31.121:80/ics/XSLT_CM_SHOWADDINFO_REQUEST?infoID=1141824_TfL&amp;seqID=1</infoLinkURL>
+          <infoLinkImage></infoLinkImage>
+          <infoText>
+            <content></content>
+            <subtitle>STRATFORD STATION, JUBILEE LINE: If you require level access between train and platform the area you need to board the train will depend on where you are travelling to. For Green Park and Kingsbury, please use cars 5 and 6, for Wembley Park, please use car 7. For West Ham, Canning Town, North Greenwich, Canary Wharf, Canada Water, Bermondsey, London Bridge, Southwark and Westminster, please use any car.</subtitle>
+            <subject></subject>
+            <additionalText></additionalText>
+            <image></image>
+            <outputClientText>
+              <htmlText></htmlText>
+              <wmlText></wmlText>
+              <smsText></smsText>
+              <speechText></speechText>
+            </outputClientText>
+          </infoText>
+        </infoLink>
+        <odvNameInput>Stratford</odvNameInput>
+      </itdOdvName>
+    </itdOdv>
+    <itdOdv type="unknown" usage="via">
+      <itdOdvPlace state="empty">
+        <odvPlaceElem></odvPlaceElem>
+      </itdOdvPlace>
+      <itdOdvName state="empty">
+        <odvNameElem></odvNameElem>
+      </itdOdvName>
+    </itdOdv>
+    <itdTripDateTime deparr="dep" ttpFrom="20131001" ttpTo="20141219">
+      <itdDateTime>
+        <itdDate day="13" month="3" year="2014" weekday="5">
+      </itdDate>
+        <itdTime hour="20" minute="45">
+      </itdTime>
+    </itdDateTime>
+  </itdTripDateTime>
+    <itdTripOptions userDefined="0">
+      <itdPtOptions active="-1" maxChanges="9" changeSpeed="normal" lineRestriction="400" routeType="LEASTTIME" plane="0" bike="0" noSolidStairs="0" noEscalators="0" noElevators="0" lowPlatformVhcl="0" wheelchair="0" SOSAvail="0" noCrowded="0" illumTransfer="0" noInsecurePlaces="0" overgroundTransfer="0" maxTime="360" maxWait="120" noLonelyTransfer="0" useProxFootSearch="0" privateTransport="0">
+        <excludedMeans>
+          <meansElem value="0" selected="0">Train</meansElem>
+          <meansElem value="1" selected="0">Commuter railway</meansElem>
+          <meansElem value="2" selected="0">Subway</meansElem>
+          <meansElem value="3" selected="0">City rail</meansElem>
+          <meansElem value="4" selected="0">Tram</meansElem>
+          <meansElem value="5" selected="0">Bus</meansElem>
+          <meansElem value="6" selected="1">Regional bus</meansElem>
+          <meansElem value="7" selected="0">Coach</meansElem>
+          <meansElem value="8" selected="0">Cable car/Rack railw</meansElem>
+          <meansElem value="9" selected="0">Ferry</meansElem>
+          <meansElem value="10" selected="1">Taxi on demand</meansElem>
+          <meansElem value="11" selected="1">Other</meansElem>
+          <meansElem value="12" selected="1">Airplane</meansElem>
+          <meansElem value="13" selected="1">Train (local)</meansElem>
+          <meansElem value="14" selected="1">Train (intercity)</meansElem>
+          <meansElem value="15" selected="1">Train (intercity wit</meansElem>
+          <meansElem value="16" selected="1">Train (intercity wit</meansElem>
+          <meansElem value="17" selected="1">Rail replacement ser</meansElem>
+          <meansElem value="18" selected="1">Rail shuttle</meansElem>
+          <meansElem value="19" selected="1">Citizen bus</meansElem>
+        </excludedMeans>
+      </itdPtOptions>
+      <itdItOptions>
+        <departureTransport>
+          <individualTransport meansCode="100" value="20" speed="normal" selected="1">
+        </individualTransport>
+          <individualTransport meansCode="101" value="60" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="102" value="60" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="103" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="104" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="105" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="106" value="120" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="107" value="60" speed="normal" selected="0">
+        </individualTransport>
+      </departureTransport>
+        <arrivalTransport>
+          <individualTransport meansCode="100" value="20" speed="normal" selected="1">
+        </individualTransport>
+          <individualTransport meansCode="101" value="60" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="102" value="60" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="103" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="104" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="105" value="10" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="106" value="120" speed="normal" selected="0">
+        </individualTransport>
+          <individualTransport meansCode="107" value="60" speed="normal" selected="0">
+        </individualTransport>
+      </arrivalTransport>
+    </itdItOptions>
+  </itdTripOptions>
+    <itdItinerary>
+      <itdRouteList>
+        <itdRoute active="1" delete="0" changes="1" distance="0" alternative="0" publicDuration="00:39" print="0" routeIndex="0" routeTripIndex="0" cTime="20140313204001380" searchMode="0" vehicleTime="32" method="itp" selected="1">
+          <itdMapItemList>
+            <itdMapItem text="" type="RM">
+              <itdImage src="FILELOAD?Filename=TLJXML03P1__532217A10.pdf">
+            </itdImage>
+          </itdMapItem>
+        </itdMapItemList>
+          <itdDaysOfService></itdDaysOfService>
+          <itdPartialRouteList>
+            <itdPartialRoute active="1" timeMinute="22" type="PT" bookingCode="STLJXML03P1_2002919909R1T0PR0" hasFrequency="0">
+              <itdPoint stopID="1000012" area="5" usage="departure" name="Balham Underground Station" platform="86152" platformName="" hasStaticInfo="1">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=TLJXML03P1__532217A11.pdf">
+                  </itdImage>
+                </itdMapItem>
+                  <itdMapItem text="" type="SM">
+                    <itdImage src="tfl/TK_Balham.pdf" size="2065">
+                  </itdImage>
+                </itdMapItem>
+              </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="13" month="3" year="2014" weekday="5">
+                </itdDate>
+                  <itdTime hour="20" minute="48">
+                </itdTime>
+              </itdDateTime>
+                <genAttrList>
+                  <genAttrElem>
+                    <name>NaPTAN-ID</name>
+                    <value>9400ZZLUBLM1</value>
+                  </genAttrElem>
+                </genAttrList>
+              </itdPoint>
+              <itdPoint stopID="1000013" area="12" usage="arrival" name="Bank Underground Station" platform="86165" platformName="" hasStaticInfo="1">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=TLJXML03P1__532217A12.pdf">
+                  </itdImage>
+                </itdMapItem>
+                  <itdMapItem text="" type="SM">
+                    <itdImage src="tfl/TK_Bank.pdf" size="4489">
+                  </itdImage>
+                </itdMapItem>
+              </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="13" month="3" year="2014" weekday="5">
+                </itdDate>
+                  <itdTime hour="21" minute="10">
+                </itdTime>
+              </itdDateTime>
+                <genAttrList>
+                  <genAttrElem>
+                    <name>NaPTAN-ID</name>
+                    <value>9400ZZLUBNK4</value>
+                  </genAttrElem>
+                </genAttrList>
+              </itdPoint>
+              <itdMeansOfTransport name="Underground Northern" type="1" shortname="Northern" destination="High Barnet via Bank" symbol="NTN" network="tfl" productName="Underground" motType="2">
+                <motDivaParams project="y05" network="tfl" line="01NTN" supplement=" " direction="H">
+              </motDivaParams>
+                <itdRouteDescText>Morden - Bank/Charing Cross - Camden Town - Edgware/High Barnet/Mill Hill East</itdRouteDescText>
+                <itdOperator>
+                  <code>LUL</code>
+                  <name>London Underground</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <itdFootPathInfo duration="6" position="AFTER">
+                <itdFootPathElem type="STAIRS" level="UP" description="" disrupted="0">
+                  <itdPoint stopID="1000013" area="12">
+                </itdPoint>
+                  <itdPoint stopID="1000013" area="26">
+                </itdPoint>
+              </itdFootPathElem>
+                <itdFootPathElem type="STAIRS" level="UP" description="" disrupted="0">
+                  <itdPoint stopID="1000013" area="26">
+                </itdPoint>
+                  <itdPoint stopID="1000013" area="5">
+                </itdPoint>
+              </itdFootPathElem>
+            </itdFootPathInfo>
+              <infoLink>
+                <paramList>
+                  <param edit="0">
+                    <type>outputOption</type>
+                    <name>appearance</name>
+                    <value>2</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>creationTime</name>
+                    <value>16/04/13 12:39</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>lastModificationTime</name>
+                    <value>26/02/14 15:52</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>priority</name>
+                    <value>normal</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop2</name>
+                    <value>1000148</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>infoType</name>
+                    <value>stopInfo</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop0</name>
+                    <value>1000013</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop1</name>
+                    <value>1007596</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>systemName</name>
+                    <value>unknown</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>infoID</name>
+                    <value>1152394_TFL</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>seqID</name>
+                    <value>4</value>
+                  </param>
+                </paramList>
+                <infoLinkText>BANK STATION: Until further notice, exit 4 to Cornhill is closed. No down escalator between Monument station and the Northern line platforms. Please walk down the fixed escalator
+</infoLinkText>
+                <infoLinkURL>http://213.219.31.121:80/ics/XSLT_CM_SHOWADDINFO_REQUEST?infoID=1152394_TFL&amp;seqID=1</infoLinkURL>
+                <infoLinkImage></infoLinkImage>
+                <infoText>
+                  <content></content>
+                  <subtitle>BANK STATION: Until further notice, exit 4 to Cornhill is closed. No down escalator between Monument station and the Northern line platforms. Please walk down the fixed escalator
+</subtitle>
+                  <subject></subject>
+                  <additionalText></additionalText>
+                  <image></image>
+                  <outputClientText>
+                    <htmlText></htmlText>
+                    <wmlText></wmlText>
+                    <smsText></smsText>
+                    <speechText></speechText>
+                  </outputClientText>
+                </infoText>
+              </infoLink>
+              <itdFrequencyInfo tripIndex="0" minTimeGap="0" maxTimeGap="0" avTimeGap="0" minDuration="22" maxDuration="22" avDuration="22">
+                <itdFreqTripList></itdFreqTripList>
+                <itdMeansOfTransportList>
+                  <itdMeansOfTransport name="Underground Northern" type="1" shortname="Northern" destination="High Barnet via Bank" symbol="NTN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01NTN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                  <itdMeansOfTransport name="Underground Northern" type="1" shortname="Northern" destination="Edgware via Bank" symbol="NTN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01NTN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                </itdMeansOfTransportList>
+              </itdFrequencyInfo>
+              <itdStopSeq>
+                <itdPoint stopID="1000012" area="5" usage="" name="Balham Underground Station" platform="86152" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1">
+                  </itdDate>
+                    <itdTime hour="0" minute="-1">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="48">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000052" area="2" usage="" name="Clapham South Underground Station" platform="86188" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="50">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000050" area="3" usage="" name="Clapham Common Underground Station" platform="86186" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="52">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="53">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000051" area="3" usage="" name="Clapham North Underground Station" platform="86187" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="54">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000223" area="2" usage="" name="Stockwell Underground Station" platform="86343" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="56">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000172" area="2" usage="" name="Oval Underground Station" platform="86296" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="58">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="20" minute="59">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000121" area="2" usage="" name="Kennington Underground Station" platform="86251" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="0">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="3">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000073" area="4" usage="" name="Elephant &amp; Castle Underground Station" platform="86212" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="4">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="5">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000026" area="3" usage="" name="Borough Underground Station" platform="86165" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="6">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="7">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000139" area="2" usage="" name="London Bridge Underground Station" platform="86266" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="8">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000013" area="12" usage="" name="Bank Underground Station" platform="86165" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="10">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1">
+                  </itdDate>
+                    <itdTime hour="0" minute="-1">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+            </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>UNKNOWN_ELLIPSOID</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateString decimal="." cs="," ts="&amp;#x20;">528509,826715 528549,826636 528578,826588 528597,826562 528653,826501 528687,826458 528710,826410 528749,826307 528788,826195 528796,826145 528808,825915 528804,825841 528808,825782 528831,825710 528849,825673 528849,825673 528869,825631 528999,825411 529092,825246 529153,825121 529219,824975 529244,824932 529268,824899 529370,824783 529431,824722 529469,824692 529522,824663 529532,824659 529532,824659 529584,824636 529629,824610 529787,824512 529912,824423 529973,824371 530005,824333 530035,824283 530044,824260 530044,824260 530126,824056 530162,823986 530197,823935 530309,823801 530375,823718 530441,823616 530473,823569 530473,823569 530555,823448 530570,823421 530585,823389 530665,823253 530694,823209 530740,823135 530866,822940 530907,822869 530991,822732 531147,822494 531161,822467 531161,822467 531236,822322 531338,822145 531444,821981 531573,821768 531619,821689 531619,821689 531671,821598 531754,821460 531816,821337 531938,821193 531956,821155 531964,821112 531953,820972 531958,820943 531958,820943 531959,820938 531992,820853 532016,820765 532046,820712 532126,820586 532199,820491 532318,820372 532378,820319 532426,820271 532426,820271 532434,820264 532460,820231 532481,820192 532549,820022 532584,819951 532600,819928 532674,819832 532737,819763 532753,819736 532753,819736 532780,819691 532820,819557 532855,819381 532880,819234 532880,819196 532861,819145 532802,819036 532784,819002</itdCoordinateString>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+              <itdInterchangePathCoordinates>
+                <itdPathCoordinates>
+                  <coordEllipsoid>UNKNOWN_ELLIPSOID</coordEllipsoid>
+                  <coordType>PROJECTION_MDV</coordType>
+                  <itdCoordinateString decimal="." cs="," ts="&amp;#x20;">532786,819001 532751,818866</itdCoordinateString>
+                  <itdCoordinateReductionList></itdCoordinateReductionList>
+                </itdPathCoordinates>
+              </itdInterchangePathCoordinates>
+            </itdPartialRoute>
+            <itdPartialRoute active="1" timeMinute="10" type="PT" bookingCode="STLJXML03P1_2002919909R1T0PR1" hasFrequency="0">
+              <itdPoint stopID="1000013" area="5" usage="departure" name="Bank Underground Station" platform="86158" platformName="" hasStaticInfo="1">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=TLJXML03P1__532217A12.pdf">
+                  </itdImage>
+                </itdMapItem>
+                  <itdMapItem text="" type="SM">
+                    <itdImage src="tfl/TK_Bank.pdf" size="4489">
+                  </itdImage>
+                </itdMapItem>
+              </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="13" month="3" year="2014" weekday="5">
+                </itdDate>
+                  <itdTime hour="21" minute="17">
+                </itdTime>
+              </itdDateTime>
+                <genAttrList>
+                  <genAttrElem>
+                    <name>NaPTAN-ID</name>
+                    <value>9400ZZLUBNK1</value>
+                  </genAttrElem>
+                </genAttrList>
+              </itdPoint>
+              <itdPoint stopID="1000226" area="2" usage="arrival" name="Stratford Underground Station" platform="86344" platformName="" hasStaticInfo="1">
+                <itdMapItemList>
+                  <itdMapItem text="" type="RM">
+                    <itdImage src="FILELOAD?Filename=TLJXML03P1__532217A13.pdf">
+                  </itdImage>
+                </itdMapItem>
+                  <itdMapItem text="" type="SM">
+                    <itdImage src="tfl/TK_Stratford.pdf" size="2531">
+                  </itdImage>
+                </itdMapItem>
+              </itdMapItemList>
+                <itdDateTime>
+                  <itdDate day="13" month="3" year="2014" weekday="5">
+                </itdDate>
+                  <itdTime hour="21" minute="27">
+                </itdTime>
+              </itdDateTime>
+                <genAttrList>
+                  <genAttrElem>
+                    <name>NaPTAN-ID</name>
+                    <value>9400ZZLUSTD1</value>
+                  </genAttrElem>
+                </genAttrList>
+              </itdPoint>
+              <itdMeansOfTransport name="Underground Central" type="1" shortname="Central" destination="Newbury Park Underground Station" symbol="CEN" network="tfl" productName="Underground" motType="2">
+                <motDivaParams project="y05" network="tfl" line="01CEN" supplement=" " direction="H">
+              </motDivaParams>
+                <itdRouteDescText>West Ruislip/Ealing Broadway - Bank - Hainault/Epping</itdRouteDescText>
+                <itdOperator>
+                  <code>LUL</code>
+                  <name>London Underground</name>
+                </itdOperator>
+              </itdMeansOfTransport>
+              <infoLink>
+                <paramList>
+                  <param edit="0">
+                    <type>outputOption</type>
+                    <name>appearance</name>
+                    <value>1</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>infoType</name>
+                    <value>lineInfo</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>infoID</name>
+                    <value>2353810000026157</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>systemName</name>
+                    <value>unknown</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>creationTime</name>
+                    <value>13/03/14 20:03</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>lastModificationTime</name>
+                    <value>13/03/14 20:03</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>priority</name>
+                    <value>normal</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>seqID</name>
+                    <value>1</value>
+                  </param>
+                </paramList>
+                <infoLinkText>Central Line: Severe delays due to a person under a train earlier. London Underground tickets will be accepted Abellio Greater Anglia and local bus services.</infoLinkText>
+                <infoLinkURL></infoLinkURL>
+                <infoLinkImage></infoLinkImage>
+                <infoText>
+                  <content></content>
+                  <subtitle>Central Line: Severe delays due to a person under a train earlier. London Underground tickets will be accepted Abellio Greater Anglia and local bus services.</subtitle>
+                  <subject></subject>
+                  <additionalText></additionalText>
+                  <image></image>
+                  <outputClientText>
+                    <htmlText></htmlText>
+                    <wmlText></wmlText>
+                    <smsText></smsText>
+                    <speechText></speechText>
+                  </outputClientText>
+                </infoText>
+              </infoLink>
+              <infoLink>
+                <paramList>
+                  <param edit="0">
+                    <type>outputOption</type>
+                    <name>appearance</name>
+                    <value>2</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>creationTime</name>
+                    <value>16/04/13 12:39</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>lastModificationTime</name>
+                    <value>26/02/14 15:52</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>priority</name>
+                    <value>normal</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop2</name>
+                    <value>1000148</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>infoType</name>
+                    <value>stopInfo</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop0</name>
+                    <value>1000013</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop1</name>
+                    <value>1007596</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>systemName</name>
+                    <value>unknown</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>infoID</name>
+                    <value>1152394_TFL</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>seqID</name>
+                    <value>4</value>
+                  </param>
+                </paramList>
+                <infoLinkText>BANK STATION: Until further notice, exit 4 to Cornhill is closed. No down escalator between Monument station and the Northern line platforms. Please walk down the fixed escalator
+</infoLinkText>
+                <infoLinkURL>http://213.219.31.121:80/ics/XSLT_CM_SHOWADDINFO_REQUEST?infoID=1152394_TFL&amp;seqID=1</infoLinkURL>
+                <infoLinkImage></infoLinkImage>
+                <infoText>
+                  <content></content>
+                  <subtitle>BANK STATION: Until further notice, exit 4 to Cornhill is closed. No down escalator between Monument station and the Northern line platforms. Please walk down the fixed escalator
+</subtitle>
+                  <subject></subject>
+                  <additionalText></additionalText>
+                  <image></image>
+                  <outputClientText>
+                    <htmlText></htmlText>
+                    <wmlText></wmlText>
+                    <smsText></smsText>
+                    <speechText></speechText>
+                  </outputClientText>
+                </infoText>
+              </infoLink>
+              <infoLink>
+                <paramList>
+                  <param edit="0">
+                    <type>outputOption</type>
+                    <name>appearance</name>
+                    <value>3</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>creationTime</name>
+                    <value>12/06/12 22:41</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>lastModificationTime</name>
+                    <value>09/09/12 12:07</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>priority</name>
+                    <value>normal</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>systemName</name>
+                    <value>unknown</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>infoType</name>
+                    <value>stopInfo</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop0</name>
+                    <value>1000226</value>
+                  </param>
+                  <param edit="0">
+                    <type>addInfoParam</type>
+                    <name>concernedStop1</name>
+                    <value>1000274</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>infoID</name>
+                    <value>1133185_TfL</value>
+                  </param>
+                  <param edit="0">
+                    <type>system</type>
+                    <name>seqID</name>
+                    <value>8</value>
+                  </param>
+                </paramList>
+                <infoLinkText>STRATFORD AND WOODFORD STATIONS: A ramp is provided at this station providing step-free access onto Central line trains. Please ask staff in the ticket hall for assistance.</infoLinkText>
+                <infoLinkURL>http://213.219.31.121:80/ics/XSLT_CM_SHOWADDINFO_REQUEST?infoID=1133185_TfL&amp;seqID=1</infoLinkURL>
+                <infoLinkImage></infoLinkImage>
+                <infoText>
+                  <content></content>
+                  <subtitle>STRATFORD AND WOODFORD STATIONS: A ramp is provided at this station providing step-free access onto Central line trains. Please ask staff in the ticket hall for assistance.</subtitle>
+                  <subject></subject>
+                  <additionalText></additionalText>
+                  <image></image>
+                  <outputClientText>
+                    <htmlText></htmlText>
+                    <wmlText></wmlText>
+                    <smsText></smsText>
+                    <speechText></speechText>
+                  </outputClientText>
+                </infoText>
+              </infoLink>
+              <itdFrequencyInfo tripIndex="0" minTimeGap="0" maxTimeGap="0" avTimeGap="0" minDuration="10" maxDuration="10" avDuration="10">
+                <itdFreqTripList></itdFreqTripList>
+                <itdMeansOfTransportList>
+                  <itdMeansOfTransport name="Underground Central" type="1" shortname="Central" destination="Newbury Park Underground Station" symbol="CEN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01CEN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                  <itdMeansOfTransport name="Underground Central" type="1" shortname="Central" destination="Loughton Underground Station" symbol="CEN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01CEN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                  <itdMeansOfTransport name="Underground Central" type="1" shortname="Central" destination="Hainault Underground Station" symbol="CEN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01CEN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                  <itdMeansOfTransport name="Underground Central" type="1" shortname="Central" destination="Epping Underground Station" symbol="CEN" network="tfl" productName="Underground" motType="2">
+                    <motDivaParams project="y05" network="tfl" line="01CEN" supplement=" " direction="H">
+                  </motDivaParams>
+                    <itdOperator>
+                      <code>LUL</code>
+                      <name>London Underground</name>
+                    </itdOperator>
+                  </itdMeansOfTransport>
+                </itdMeansOfTransportList>
+              </itdFrequencyInfo>
+              <itdStopSeq>
+                <itdPoint stopID="1000013" area="5" usage="" name="Bank Underground Station" platform="86158" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1">
+                  </itdDate>
+                    <itdTime hour="0" minute="-1">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="17">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000138" area="2" usage="" name="Liverpool Street Underground Station" platform="86267" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="18">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="19">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000022" area="2" usage="" name="Bethnal Green Underground Station" platform="86163" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="21">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="22">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000146" area="3" usage="" name="Mile End Underground Station" platform="86276" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="24">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+                <itdPoint stopID="1000226" area="2" usage="" name="Stratford Underground Station" platform="86344" platformName="" hasStaticInfo="1">
+                  <itdDateTime>
+                    <itdDate day="13" month="3" year="2014" weekday="5">
+                  </itdDate>
+                    <itdTime hour="21" minute="27">
+                  </itdTime>
+                </itdDateTime>
+                  <itdDateTime>
+                    <itdDate day="-1" month="0" year="0" weekday="-1">
+                  </itdDate>
+                    <itdTime hour="0" minute="-1">
+                  </itdTime>
+                </itdDateTime>
+              </itdPoint>
+            </itdStopSeq>
+              <itdPathCoordinates>
+                <coordEllipsoid>UNKNOWN_ELLIPSOID</coordEllipsoid>
+                <coordType>PROJECTION_MDV</coordType>
+                <itdCoordinateString decimal="." cs="," ts="&amp;#x20;">532752,818868 532828,818833 532856,818819 532880,818806 532899,818790 532958,818721 533006,818671 533079,818547 533094,818504 533118,818419 533134,818389 533160,818357 533167,818348 533167,818348 533565,817825 533639,817750 533716,817693 533869,817584 533979,817501 534039,817474 534127,817444 534261,817410 534538,817351 534855,817289 534897,817287 535051,817301 535051,817301 535259,817320 535326,817339 535374,817363 535410,817392 535614,817588 535677,817633 535746,817668 535847,817705 535899,817715 535988,817712 536036,817696 536139,817650 536252,817590 536353,817529 536410,817501 536522,817451 536522,817451 536554,817437 536616,817414 536893,817310 537017,817269 537046,817255 537082,817227 537343,816871 537373,816841 537449,816779 537584,816675 538009,816297 538146,816144 538278,815958 538409,815767 538467,815682 538499,815641 538560,815576</itdCoordinateString>
+                <itdCoordinateReductionList></itdCoordinateReductionList>
+              </itdPathCoordinates>
+            </itdPartialRoute>
+          </itdPartialRouteList>
+        </itdRoute>
+      </itdRouteList>
+    </itdItinerary>
+  </itdTripRequest>
+</itdRequest>
